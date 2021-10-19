@@ -55,8 +55,9 @@ mongoose.connect(process.env.DB_URI, {
 
 // server created
 const server = app.listen(process.env.PORT, () => {
-    console.log(`Server started on port ${process.env.PORT}`);
+    console.log(`Server started on port ${process.env.PORT} in ${process.env.NODE_ENV}`);
 });
+
 
 // Handling Unhandled Promise Rejection
 process.on('unhandledRejection', err => {
